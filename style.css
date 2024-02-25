@@ -4,6 +4,7 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  /* font-family: 'Courier New', Courier, monospace; */
 }
 
 body {
@@ -16,24 +17,69 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: end;
+  justify-content: space-between;
   width: 80px;
-  background-color: darkslategray;
+  background-color: rgb(74, 71, 74);
 }
 
-#social-buttons {
+main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #262027;
+  align-items: center;
+  justify-content: center;
+}
+
+#social-buttons, #nav-buttons {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 4px;
+  gap: 32px;
   padding: 26px 0px;
 }
-.socials {
-  width: 40px;
-  height: 40px;
+.socials, .navigate {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(1px 4px 1px rgba(21, 21, 21, 0.575));
 }
 
-#github-icon {
-  width: 100%;
-  height: 100%;
+.socials:hover, .navigate:hover{
+  scale: 1.05;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  top: 8px;
+  left: 55px;
+  z-index: 1;
+  width: max-content;
+  color: rgba(255, 255, 255, 0.794);
+  /* background-color: #1a242c; */
+  padding: 2px 4px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.socials:hover .tooltip-text, .navigate:hover .tooltip-text {
+  visibility: visible;
+}
+
+
+h1 {
+  font-size: 90px;
+}
+
+h2 {
+  font-size: 40px;
+  color: white;
+}
+
+#indent-and {
+  padding-left: 32px;
+}
+
+#about-me-main {
+  color: white;
 }
