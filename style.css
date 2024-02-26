@@ -18,7 +18,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	width: 80px;
+	width: 60px;
 	background-color: rgb(74, 71, 74);
 }
 
@@ -40,6 +40,10 @@ main {
 	gap: 32px;
 	padding: 26px 0px;
 }
+
+.current-nav {
+	background-color: rgba(43, 41, 41, 0.544);
+}
 .socials,
 .navigate {
 	width: 30px;
@@ -55,8 +59,8 @@ main {
 .tooltip-text {
 	visibility: hidden;
 	position: absolute;
-	top: 8px;
-	left: 55px;
+	top: 5px;
+	left: 48px;
 	z-index: 1;
 	width: max-content;
 	color: rgba(255, 255, 255, 0.794);
@@ -122,4 +126,21 @@ h2 {
 	align-items: center;
 	color: rgb(153, 153, 153);
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.lang-divider {
+	cursor: default;
+	color: rgb(208, 208, 208);
+}
+
+.gradients {
+	font-family: sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	color: transparent;
+	text-align: center;
+	background-clip: text;
+	fill: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
