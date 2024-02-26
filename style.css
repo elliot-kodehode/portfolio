@@ -132,15 +132,3 @@ h2 {
 	cursor: default;
 	color: rgb(208, 208, 208);
 }
-
-.gradients {
-	font-family: sans-serif;
-	font-size: 30px;
-	font-weight: bold;
-	color: transparent;
-	text-align: center;
-	background-clip: text;
-	fill: transparent;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}

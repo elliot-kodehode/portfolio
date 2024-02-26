@@ -1,18 +1,20 @@
 /** @format */
 
-const gradients = document.getElementsByClassName('gradient')
+const gradients = document.getElementsByClassName('gradient2')
 const linkedIn = document.getElementById('linked-in')
 
 function colorPicker() {
-	const gradientColours = ['#22FFE4', '#9747FF', '#2DFF81', '#FF9A51']
+	// const gradientColours = ['#9747FF', '#2DFF81', '#FF9A51']
 
-	let chosenColor = gradientColours[Math.floor(Math.random() * gradientColours.length)]
-	console.log(chosenColor)
+	// let chosenColor = gradientColours[Math.floor(Math.random() * gradientColours.length)]
+	// console.log(chosenColor)
 
-	for (let i = 0; i < gradients.length; i++) {
-		gradients[i].style.fill = chosenColor
-		gradients[i].style.color = chosenColor
-	}
+	// setting text-color gradient
+	element.style.backgroundImage = 'linear-gradient(to right, red, blue)'
+	element.style.WebkitBackgroundClip = 'text'
+	element.style.color = 'transparent'
 }
+
+// linear-gradient(#2DFF81, #9747FF)
 
 colorPicker()
