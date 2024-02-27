@@ -132,3 +132,8 @@ h2 {
 	cursor: default;
 	color: rgb(208, 208, 208);
 }
+
+#mode-icon path {
+	width: 25px !important;
+	height: 25px !important;
+}
