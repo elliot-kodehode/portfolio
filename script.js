@@ -6,7 +6,10 @@ const gradientIcon = document.getElementsByClassName('gradient-icon')
 const linkedIn = document.getElementById('linked-in')
 const languageSwitch = document.querySelector(".toggle-mode")
 const modeIcon = document.getElementById("mode-icon")
+const gradientBtn = document.getElementsByClassName("gradient-btn")
 // const iconPath = document.querySelector(".icon-path")
+
+
 
 function colorPicker() {
 	const gradientColours = [
@@ -52,18 +55,27 @@ function colorPicker() {
 		const iconPaths = gradientIcon[i].getElementsByTagName("path");
 		for (let j = 0; j < iconPaths.length; j++) {
 			iconPaths[j].setAttribute("fill", `url(#icon-gradient-${i})`);
-		}
+		}}
 
-	}
+	    for (let k = 0; gradientBtn.length; k++) {gradientBtn[k].style.background = `linear-gradient(60deg, ${chosenColors.start}, ${chosenColors.end})`}
+
 }
 // linear-gradient(#2DFF81, #9747FF)
 
 colorPicker()
 
+let isDarkMode = true
 const changeMode = () => {
+	isDarkMode = !isDarkMode;
+// return isDarkMode;
+
+if (isDarkMode === true) {console.log("it be true doe")}
+else {console.log("it be not true doe")}
+
 
 }
 ;
+changeMode()
 
 
 languageSwitch.addEventListener("click", changeMode)

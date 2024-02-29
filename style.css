@@ -54,7 +54,7 @@ main {
 
 .socials:hover,
 .navigate:hover {
-	scale: 1.05;
+	transform: scale(1.05);
 }
 
 .tooltip-text {
@@ -89,15 +89,28 @@ h2 {
 	padding-left: 32px;
 }
 
-#about-me-main {
-	color: white;
+.gradient-btn {
+	margin-top: 20px;
+	width: fit-content;
+	padding: 8px 30px 8px 12px;
+	position: relative;
 }
 
-.toggler {
-	cursor: pointer;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+.gradient-btn:hover {
+	transform: scale(1.02);
+}
+
+
+.link-text {
+	color: white;
+	text-decoration: none;
+}
+
+
+#pointer-about {
+	position: absolute;
+	right: -22px;
+	top: 16px;
 }
 
 
@@ -107,6 +120,19 @@ h2 {
 	right: 22px;
 	gap: 12px;
 }
+
+.toggler {
+	cursor: pointer;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.lang-icon:has(+ .lang-container:hover){
+	transform: scale(1.1);
+	animation: ease;
+}
+
 
 .toggle-circle:checked + .toggler {
 	/* font-weight: 700; */
@@ -126,12 +152,16 @@ h2 {
 
 .toggle-lang {
 	width: max-content;
-	gap: 6px;
+	gap: 8px;
 	display: flex;
 	height: fit-content;
 	align-items: center;
 	color: rgb(153, 153, 153);
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.lang-container {
+	display: flex;
+	gap: 3px;
 }
 
 .lang-divider {
@@ -145,4 +175,8 @@ h2 {
 #mode-icon path {
 	width: 25px !important;
 	height: 25px !important;
+}
+
+#mode-icon:hover {
+	transform: scale(1.1);
 }
