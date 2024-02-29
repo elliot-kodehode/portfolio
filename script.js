@@ -1,6 +1,10 @@
 /** @format */
-// import githubLogo from 'icons/github.svg'
 
+// main elements
+const stickyNav = document.getElementById("sticky-sidenav")
+const mainContent = document.getElementById("main-content")
+
+// sub elements
 const gradientText = document.getElementsByClassName('gradient-text')
 const gradientIcon = document.getElementsByClassName('gradient-icon')
 const linkedIn = document.getElementById('linked-in')
@@ -57,25 +61,30 @@ function colorPicker() {
 			iconPaths[j].setAttribute("fill", `url(#icon-gradient-${i})`);
 		}}
 
-	    for (let k = 0; gradientBtn.length; k++) {gradientBtn[k].style.background = `linear-gradient(60deg, ${chosenColors.start}, ${chosenColors.end})`}
+	    for (let k = 0; k < gradientBtn.length; k++) {gradientBtn[k].style.background = `linear-gradient(60deg, ${chosenColors.start}, ${chosenColors.end})`}
 
 }
 // linear-gradient(#2DFF81, #9747FF)
 
 colorPicker()
 
-let isDarkMode = true
+let isDarkMode = false;
 const changeMode = () => {
 	isDarkMode = !isDarkMode;
-// return isDarkMode;
 
-if (isDarkMode === true) {console.log("it be true doe")}
-else {console.log("it be not true doe")}
-
-
+if (isDarkMode) {
+	stickyNav.style.background = "rgb(74, 71, 74)";
+	mainContent.style.background = "#262027";
+}
+else {
+	stickyNav.style.background = "#94b296";
+	mainContent.style.background = "#e3e3e3";
+}
 }
 ;
 changeMode()
 
 
-languageSwitch.addEventListener("click", changeMode)
+// languageSwitch.addEventListener("click",)
+
+modeIcon.addEventListener("click", changeMode)

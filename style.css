@@ -20,15 +20,15 @@ body {
 	justify-content: space-between;
 	width: 60px;
 	padding: 20px 0;
-	background-color: rgb(74, 71, 74);
+	/*background-color: rgb(74, 71, 74);*/
 }
 
-main {
+#main-content {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	height: 100%;
-	background-color: #262027;
+	/*background-color: #262027;*/
 	align-items: center;
 	justify-content: center;
 }
@@ -42,9 +42,8 @@ main {
 	padding: 26px 0;
 }
 
-.current-nav {
-	background-color: rgba(43, 41, 41, 0.544);
-}
+/*.current-nav {*/
+/*}*/
 .socials,
 .navigate {
 	width: 30px;
