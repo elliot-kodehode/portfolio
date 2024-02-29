@@ -19,6 +19,7 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	width: 60px;
+	padding: 20px 0;
 	background-color: rgb(74, 71, 74);
 }
 
@@ -38,7 +39,7 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	gap: 32px;
-	padding: 26px 0px;
+	padding: 26px 0;
 }
 
 .current-nav {
@@ -94,7 +95,11 @@ h2 {
 
 .toggler {
 	cursor: pointer;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
+
 
 .options {
 	position: absolute;
@@ -110,6 +115,7 @@ h2 {
 
 .toggle-circle {
 	display: none;
+
 }
 
 .options {
@@ -131,6 +137,9 @@ h2 {
 .lang-divider {
 	cursor: default;
 	color: rgb(208, 208, 208);
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 #mode-icon path {
