@@ -11,6 +11,8 @@ const linkedIn = document.getElementById('linked-in')
 const languageSwitch = document.querySelector(".toggle-mode")
 const modeIcon = document.getElementById("mode-icon")
 const gradientBtn = document.getElementsByClassName("gradient-btn")
+const textContent = document.getElementsByClassName(".text")
+const textLinks = document.getElementsByClassName("link-text")
 // const iconPath = document.querySelector(".icon-path")
 
 
@@ -26,12 +28,21 @@ function colorPicker() {
 	const chosenColors = gradientColours[Math.floor(Math.random() * gradientColours.length)]
 	console.log(chosenColors)
 
+
 	// setting text-color gradient
 	for (let i = 0; i < gradientText.length; i++) {
 		// setting text-color gradient for each element
 		gradientText[i].style.backgroundImage = `linear-gradient(60deg, ${chosenColors.start}, ${chosenColors.end})`;
 		gradientText[i].style.WebkitBackgroundClip = 'text';
 		gradientText[i].style.color = 'transparent';
+	}
+
+	for (let i = 0; i < gradientIcon.length; i++) {
+		const svg = gradientIcon[i];
+		const existingGradient = svg.querySelector(`linearGradient#icon-gradient-${i}`);
+		if (existingGradient) {
+			existingGradient.remove();
+		}
 	}
 
 	// setting svg color
@@ -60,7 +71,7 @@ function colorPicker() {
 		for (let j = 0; j < iconPaths.length; j++) {
 			iconPaths[j].setAttribute("fill", `url(#icon-gradient-${i})`);
 		}}
-
+// gradient for buttons
 	    for (let k = 0; k < gradientBtn.length; k++) {gradientBtn[k].style.background = `linear-gradient(60deg, ${chosenColors.start}, ${chosenColors.end})`}
 
 }
@@ -73,12 +84,11 @@ const changeMode = () => {
 	isDarkMode = !isDarkMode;
 
 if (isDarkMode) {
-	stickyNav.style.background = "rgb(74, 71, 74)";
-	mainContent.style.background = "#262027";
+	document.documentElement.setAttribute('data-theme', 'dark');
+
 }
 else {
-	stickyNav.style.background = "#94b296";
-	mainContent.style.background = "#e3e3e3";
+	document.documentElement.setAttribute('data-theme', 'light');
 }
 }
 ;
@@ -87,4 +97,7 @@ changeMode()
 
 // languageSwitch.addEventListener("click",)
 
-modeIcon.addEventListener("click", changeMode)
+modeIcon.addEventListener("click", () => {
+	changeMode();
+	colorPicker();
+});
