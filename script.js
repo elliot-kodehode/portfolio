@@ -21,7 +21,7 @@ function colorPicker() {
 	const gradientColours = [
 		{ start: "#c516cd", end: "#00d4ff" },
 		{ start: "#731ee9", end: "#24e324" },
-		{ start: "#ffee28", end: "#ff361c" },
+		{ start: "#9d2aff", end: "#ff361c" },
 		{ start: "#255ddb", end: "#06ff65" }
 	]
 

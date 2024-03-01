@@ -1,0 +1,2 @@
+make stickynav and square behind content same color,
+
