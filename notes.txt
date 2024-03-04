@@ -1,2 +1,3 @@
 make stickynav and square behind content same color,
 
+figure out if border or background for btn

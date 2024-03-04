@@ -13,16 +13,37 @@ const modeIcon = document.getElementById("mode-icon")
 const gradientBtn = document.getElementsByClassName("gradient-btn")
 const textContent = document.getElementsByClassName(".text")
 const textLinks = document.getElementsByClassName("link-text")
+const pointerArrow = document.getElementById("pointer-about")
 // const iconPath = document.querySelector(".icon-path")
 
 
+// adding dark/light mode
+let isDarkMode = false;
+const changeMode = () => {
+	isDarkMode = !isDarkMode;
+
+if (isDarkMode) {
+	document.documentElement.setAttribute('data-theme', 'dark');
+	if (pointerArrow) pointerArrow.setAttribute("src", "icons/arrow-pointer.svg");
+
+}
+else {
+	document.documentElement.setAttribute('data-theme', 'light');
+	if (pointerArrow) pointerArrow.setAttribute("src", "icons/arrow-light.svg");
+}
+}
+;
+changeMode()
 
 function colorPicker() {
 	const gradientColours = [
-		{ start: "#c516cd", end: "#00d4ff" },
-		{ start: "#731ee9", end: "#24e324" },
-		{ start: "#9d2aff", end: "#ff361c" },
-		{ start: "#255ddb", end: "#06ff65" }
+		// { start: "#c516cd", end: "#00d4ff" },
+		// { start: "#731ee9", end: "#24e324" },
+		// { start: "#9d2aff", end: "#ff361c" },
+		// { start: "#255ddb", end: "#06ff65" },
+
+		{ start: '#8e5af4', end: '#4bffe4' },
+		{ start: '#ff9447', end: '#ff605a' }
 	]
 
 	const chosenColors = gradientColours[Math.floor(Math.random() * gradientColours.length)]
@@ -70,29 +91,18 @@ function colorPicker() {
 		const iconPaths = gradientIcon[i].getElementsByTagName("path");
 		for (let j = 0; j < iconPaths.length; j++) {
 			iconPaths[j].setAttribute("fill", `url(#icon-gradient-${i})`);
-		}}
+		}
+	}
 // gradient for buttons
-	    for (let k = 0; k < gradientBtn.length; k++) {gradientBtn[k].style.background = `linear-gradient(60deg, ${chosenColors.start}, ${chosenColors.end})`}
+	for (let k = 0; k < gradientBtn.length; k++) {
+			gradientBtn[k].style.background = `linear-gradient(60deg, ${chosenColors.start}, ${chosenColors.end})`;
+}
 
 }
 // linear-gradient(#2DFF81, #9747FF)
 
 colorPicker()
 
-let isDarkMode = false;
-const changeMode = () => {
-	isDarkMode = !isDarkMode;
-
-if (isDarkMode) {
-	document.documentElement.setAttribute('data-theme', 'dark');
-
-}
-else {
-	document.documentElement.setAttribute('data-theme', 'light');
-}
-}
-;
-changeMode()
 
 
 // languageSwitch.addEventListener("click",)
