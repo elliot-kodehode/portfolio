@@ -13,29 +13,31 @@ const modeIcon = document.getElementById("mode-icon")
 const gradientBtn = document.getElementsByClassName("gradient-btn")
 const textContent = document.getElementsByClassName(".text")
 const textLinks = document.getElementsByClassName("link-text")
-const pointerArrow = document.getElementById("pointer-about")
+const pointerArrow = document.getElementsByClassName("pointer-about")
 // const iconPath = document.querySelector(".icon-path")
 
 
 // adding dark/light mode
-let isDarkMode = false;
+export let isDarkMode = false;
 const changeMode = () => {
 	isDarkMode = !isDarkMode;
 
 if (isDarkMode) {
 	document.documentElement.setAttribute('data-theme', 'dark');
-	if (pointerArrow) pointerArrow.setAttribute("src", "icons/arrow-pointer.svg");
-
+	for (let i = 0; i < pointerArrow.length; i++) {
+		pointerArrow[i].setAttribute("src", "icons/arrow-pointer.svg");
+	}
 }
 else {
 	document.documentElement.setAttribute('data-theme', 'light');
-	if (pointerArrow) pointerArrow.setAttribute("src", "icons/arrow-light.svg");
+	for (let i = 0; i < pointerArrow.length; i++) {pointerArrow[i].setAttribute("src", "icons/arrow-light.svg");
 }
-}
-;
+} }
+
 changeMode()
 
-function colorPicker() {
+
+export function colorPicker() {
 	const gradientColours = [
 		// { start: "#c516cd", end: "#00d4ff" },
 		// { start: "#731ee9", end: "#24e324" },
