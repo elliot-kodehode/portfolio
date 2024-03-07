@@ -130,9 +130,11 @@ function createProject()  {
 // loading previous and next projects
 function loadPreviousProjects() {
 	currentIndex = (currentIndex - projectsPerPage) % projects.length;
+	if (currentIndex < 0) currentIndex += projects.length;
 	createProject();
 	colorPicker()
 }
+
 function loadNextProjects() {
 	currentIndex = (currentIndex + projectsPerPage) % projects.length;
 	createProject();

@@ -15,6 +15,8 @@ const textContent = document.getElementsByClassName(".text")
 const textLinks = document.getElementsByClassName("link-text")
 const pointerArrow = document.getElementsByClassName("pointer-about")
 // const iconPath = document.querySelector(".icon-path")
+const copyIcon = document.getElementById("copy-icon")
+const copyText = document.getElementById("contact-mail")
 
 
 // adding dark/light mode
@@ -113,3 +115,12 @@ modeIcon.addEventListener("click", () => {
 	changeMode();
 	colorPicker();
 });
+
+function TextCopy() {
+
+	copyText.select()
+	copyText.setSelectionRange(0, 9999)
+
+	navigator.clipboard.writeText(TextCopy.value);
+
+}

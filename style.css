@@ -102,7 +102,7 @@ body {
 .tooltip-text {
 	visibility: hidden;
 	position: absolute;
-	top: 5px;
+	top: 10%;
 	left: 48px;
 	z-index: 1;
 	width: max-content;
@@ -225,9 +225,13 @@ h2 {
 
 
 .link-text {
+	z-index: 2;
 	color: var(--font-color);
 	font-weight: 500;
 	text-decoration: none;
+	padding: 10px;
+	margin: -10px;
+
 }
 
 
@@ -475,3 +479,64 @@ h2 {
 }
 .link {	text-decoration: none;}
 
+/*contact*/
+/**/
+
+#contact-wrapper {
+	flex-direction: column;
+	gap: 22px;
+}
+
+.info-links {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	border-top: var(--font-color) solid 6px;
+	padding-top: 22px;
+}
+
+.so-me-contact {
+	display: flex;
+	gap: 22px;
+	align-items: end;
+}
+
+.social-links {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+#social-profiles {
+	display: flex;
+	align-items: end;
+	/*flex-direction: column;*/
+	gap: 16px;
+}
+
+#mail-wrapper {
+	display: flex;
+	align-items: end;
+}
+
+#copy-icon {
+	margin-bottom: 8px;
+	margin-left: 11px;
+	/*width: 3%;*/
+	height: 60%;
+}
+
+.contact-text {
+	text-decoration: none;
+	color: var(--font-color);
+	font-size: 18px ;
+}
+
+#mail-text {
+	padding-right: 16px;
+}
+
+#text-mail {
+	font-size: 16px;
+	margin-top: -8px;
+}
