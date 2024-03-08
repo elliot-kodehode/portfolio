@@ -2,7 +2,7 @@ const projectsRow = document.getElementById("projects-row")
 const nextButton = document.getElementById("project-nav-btn-right")
 const previousButton = document.getElementById("project-nav-btn-left")
 
-import { isDarkMode, colorPicker } from "/script.js";
+import { isDarkMode, colorPicker } from "./script.js";
 
 
 const projects = [
@@ -129,8 +129,8 @@ function createProject()  {
 		projectContainer.append(projectImage, projectInfo)
 		projectsRow.appendChild(projectContainer)
 	}
+colorPicker()
 }
-
 
 // loading previous and next projects
 function loadPreviousProjects() {
