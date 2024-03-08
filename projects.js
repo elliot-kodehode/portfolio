@@ -61,9 +61,14 @@ function createProject()  {
 	}
 
 	for (let i = 0; i < projectsPerPage; i++) {
+
+		// gets the 3 projects to show
 		const adjustedIndex = (currentIndex + i) % projects.length;
+
+		// deconstructing the objects that are shown
 		const { name, image, description, skills, liveLink, repoLink } = projects[adjustedIndex];
-	// projects.forEach(({ name, image, description, skills, liveLink, repoLink }) => {
+
+		// making elements
 		const projectContainer = document.createElement("div");
 		projectContainer.classList.add("project-container");
 

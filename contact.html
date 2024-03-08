@@ -7,6 +7,7 @@
 	<link rel="icon" type="image/x-icon" href="./icons/logo-draft.svg" />
 	<script src="./script.js" type="module" defer></script>
 	<script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.birds.min.js" defer></script>
 
 	<!--		fonts-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -121,7 +122,7 @@
 </aside>
 
 <!--		main content-->
-<main class="main-content" id="about-page">
+<main class="main-content" id="contact-page">
 	<div class="options">
 		<div class="toggle-mode">
 			<svg
@@ -166,7 +167,10 @@
 
 	</div>
 	<section class="content-wrapper" id="contact-wrapper">
-			<h2>Contact me!</h2>
+			<h2 id="contact-title">Contact me!</h2>
+				<svg class="gradient-icon contact-background-icon" viewBox="0 0 1890 652" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M1847 43H43V609H1847V43ZM0 0V652H1890V0H0Z" fill="black"/>
+				</svg>
 			<div class="info-links">
 				<div id="mail-wrapper">
 					<span class="gradient-text social-links" id="mail-text">MAIL</span>
@@ -181,13 +185,12 @@
 			<div class="so-me-contact">
 				<span class="gradient-text social-links">SOCIALS</span>
 				<div id="social-profiles">
-					<span class="contact-text" id="linked-in-contact">LinkedIn ↗</span>
-					<span class="contact-text" id="github-contact">Github ↗</span>
+					<a href="https://no.linkedin.com/in/elliot-lind-28b424142?trk=people-guest_people_search-card" class="contact-text" id="linked-in-contact">LinkedIn ↗</a>
+					<a href="https://github.com/elliot-kodehode" class="contact-text" id="github-contact">Github ↗</a>
 				</div>
 			</div>
 		    </div>
 	</section>
-
 </main>
 </body>
 </html>

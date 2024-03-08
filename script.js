@@ -124,3 +124,4 @@ function TextCopy() {
 	navigator.clipboard.writeText(TextCopy.value);
 
 }
+

@@ -10,7 +10,7 @@
 	/*--background-image: none;*/
 
 	/*home*/
-	--background-image-home: url(icons/lightbgplaceholder.png);
+	--background-image-home: url(./icons/lightbgplaceholder.png);
 
 	/*about*/
 
@@ -26,7 +26,7 @@
 	--container-background: rgba(42, 42, 42, 0.32);
 
 	/*home*/
-	--background-image-home: url(icons/placeholder-bg.png);
+	--background-image-home: url(./icons/placeholder-bg.png);
 
 	/*about*/
 
@@ -324,7 +324,7 @@ h2 {
 	width: 550px;
 	height: 500px;
 	rotate: 40deg;
-	background-color: #9A97F3;
+	/*background-color: #9A97F3;*/
 	padding: 0 15px 15px 15px;
 }
 #pointer-projects {
@@ -488,6 +488,7 @@ h2 {
 }
 
 .info-links {
+	z-index: 1;
 	display: flex;
 	justify-content: space-between;
 	width: 80%;
@@ -532,6 +533,7 @@ h2 {
 	font-size: 18px ;
 }
 
+
 #mail-text {
 	padding-right: 16px;
 }
@@ -540,3 +542,28 @@ h2 {
 	font-size: 16px;
 	margin-top: -8px;
 }
+
+.contact-background-icon{
+	opacity: 20%;
+	width: 60%;
+	position: fixed;
+	transform: skew(-6deg);
+	animation: contact-background ease-in-out 6s infinite;
+}
+
+@keyframes contact-background  {
+	0% {
+		filter: blur(12px);
+	}
+	50% {
+		filter: blur(22px)
+	}
+	100% {
+		  filter: blur(12px)
+	  }
+}
+
+/*#contact-title {*/
+/*	z-index: 1;*/
+/*}*/
+/*dont need later*/
