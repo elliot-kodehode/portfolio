@@ -16,7 +16,7 @@ const textLinks = document.getElementsByClassName("link-text")
 const pointerArrow = document.getElementsByClassName("pointer-about")
 // const iconPath = document.querySelector(".icon-path")
 const copyIcon = document.getElementById("copy-icon")
-const copyText = document.getElementById("contact-mail")
+const copyToolTip = document.getElementById("mail-contact")
 
 
 // adding dark/light mode
@@ -116,12 +116,17 @@ modeIcon.addEventListener("click", () => {
 	colorPicker();
 });
 
+
+let emailCopy = "elliotalexander98@gmail.com"
 function TextCopy() {
+	navigator.clipboard.writeText(emailCopy);
 
-	copyText.select()
-	copyText.setSelectionRange(0, 9999)
-
-	navigator.clipboard.writeText(TextCopy.value);
+	copyToolTip.textContent = "Email copied!"
 
 }
+
+const resetCopy = () => copyToolTip.textContent = "Copy mail";
+
+copyIcon.addEventListener("click", TextCopy)
+copyIcon.addEventListener("mouseleave", resetCopy)
 

@@ -150,5 +150,3 @@ nextButton.addEventListener("click", loadNextProjects)
 previousButton.addEventListener("click", loadPreviousProjects)
 
 createProject();
-
-
