@@ -127,6 +127,9 @@ function TextCopy() {
 
 const resetCopy = () => copyToolTip.textContent = "Copy mail";
 
-copyIcon.addEventListener("click", TextCopy)
-copyIcon.addEventListener("mouseleave", resetCopy)
+
+if (copyIcon) {
+	copyIcon.addEventListener("click", TextCopy)
+	copyIcon.addEventListener("mouseleave", resetCopy)
+}
 
