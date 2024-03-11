@@ -9,7 +9,7 @@ const projects = [
 	{
 		name: "API-project: F2P Games",
 		image: "images/api-project.png",
-		description: "My project for an assignment to create a website using APIs. I decided to make a website listing free to play games with FreeToBrowse's API. I also added functions to sort and filter the content based on user input.",
+		description: "My project for an assignment to create a website using APIs. I decided to make a website listing free to play games with FreeToGame's API. I also added functions to sort the content based on user input.",
 		skills: ["HTML", "CSS", "Javascript", "API"],
 		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
 		repoLink: "" },
@@ -53,7 +53,22 @@ const projects = [
 console.log(projects)
 
 let currentIndex = 0;
-const projectsPerPage = 3;
+let projectsPerPage = 3;
+
+const mobile = window.matchMedia("(max-width: 700px)")
+
+function responsive(mobile) {if (mobile.matches) {
+	projectsPerPage = projects.length
+}}
+
+responsive(mobile);
+
+mobile.addEventListener("change", function() {
+	responsive(mobile);
+  });
+
+  console.log(projectsPerPage)
+
 function createProject()  {
 
 	while (projectsRow.firstChild) {
@@ -98,6 +113,7 @@ function createProject()  {
 		projectDesc.textContent = description
 
 		const usedSkillsContainer = document.createElement("div")
+		usedSkillsContainer.classList.add("skills-container")
 
 		for (let i = 0; i < skills.length; i++) {
 			const skillElement = document.createElement("span")
@@ -128,6 +144,7 @@ colorPicker()
 }
 
 // loading previous and next projects
+
 function loadPreviousProjects() {
 	currentIndex = (currentIndex - projectsPerPage) % projects.length;
 	if (currentIndex < 0) currentIndex += projects.length;

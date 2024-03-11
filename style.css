@@ -30,14 +30,18 @@ body {
 	overflow: hidden;
 	color: var(--font-color);
     font-family: "Chakra Petch", sans-serif;
+	
 }
 
 #sticky-sidenav {
+	position: fixed;
+	top: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 	width: 60px;
+	height: 100vh;
 	padding: 20px 0;
 	background-color: var(--navbar-color);
 }
@@ -50,6 +54,7 @@ body {
 	background-color: var(--bg-color);
 	align-items: center;
 	justify-content: center;
+	margin-left: 60px;
 }
 
 #social-buttons,
@@ -534,4 +539,88 @@ h2 {
 	margin-bottom: 10px;
 	width: 16px;
 	height: 20px;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 700px) {
+	h1 {
+	font-size: 50px;
+	font-weight: 700;
+	text-align: stretch;
+    } 
+	h2 {font-size: 20px;
+		
+	}
+
+	body {
+		/* height: fit-content; */
+		overflow: scroll;
+	}
+
+	#projects-row {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: max-content;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		/* gap: 10%; */
+	}
+
+	.project-container {
+		width: 280px;
+		height: fit-content;
+		/* gap: 12px; */
+	}
+
+	.project-image {
+		max-height: 200px;
+	}
+	
+	#project-nav-btn-right, #project-nav-btn-left {
+		display: none;
+	}
+	
+	#projects-page {
+		height: max-content;
+		overflow: scroll;
+		/* gap: 52px; */
+	}
+
+
+
+ /* contact */
+
+    #contact-title {
+		font-size: 28px;
+	}
+	#contact-wrapper {
+		align-items: start;
+	}
+    .info-links {
+	width: 100%;
+	flex-direction: column;
+	gap: 12px;
+    }
+    #mail-wrapper, .so-me-contact{
+	flex-direction: column;
+	align-items: start;
+	gap: 4px;
+    }
+    #mail-info {
+	display: none;
+    }
+
+	.contact-background-icon {
+		height: 300px;
+		width: 400px;
+		margin-left: 16px;
+		opacity: 60%;
+	}
+
+    .skills-container {
+	padding-top: 10px;
+    }
 }
