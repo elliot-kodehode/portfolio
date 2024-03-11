@@ -19,25 +19,6 @@ const copyIcon = document.getElementById("copy-icon")
 const copyToolTip = document.getElementById("mail-contact")
 
 
-// adding dark/light mode
-export let isDarkMode = false;
-const changeMode = () => {
-	isDarkMode = !isDarkMode;
-
-if (isDarkMode) {
-	document.documentElement.setAttribute('data-theme', 'dark');
-	for (let i = 0; i < pointerArrow.length; i++) {
-		pointerArrow[i].setAttribute("src", "icons/arrow-pointer.svg");
-	}
-}
-else {
-	document.documentElement.setAttribute('data-theme', 'light');
-	for (let i = 0; i < pointerArrow.length; i++) {pointerArrow[i].setAttribute("src", "icons/arrow-light.svg");
-}
-} }
-
-changeMode()
-
 
 export function colorPicker() {
 	const gradientColours = [
@@ -103,18 +84,10 @@ export function colorPicker() {
 }
 
 }
-// linear-gradient(#2DFF81, #9747FF)
+
 
 colorPicker()
 
-
-
-// languageSwitch.addEventListener("click",)
-
-modeIcon.addEventListener("click", () => {
-	changeMode();
-	colorPicker();
-});
 
 
 let emailCopy = "elliotalexander98@gmail.com"

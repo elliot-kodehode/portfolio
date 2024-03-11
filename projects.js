@@ -2,13 +2,13 @@ const projectsRow = document.getElementById("projects-row")
 const nextButton = document.getElementById("project-nav-btn-right")
 const previousButton = document.getElementById("project-nav-btn-left")
 
-import { isDarkMode, colorPicker } from "./script.js";
+import { colorPicker } from "./script.js";
 
 
 const projects = [
 	{
 		name: "API-project: F2P Games",
-		image: "icons/placeholderpic1.png",
+		image: "images/placeholderpic1.png",
 		description: "My project for an assignment to create a website using APIs. I decided to make a website listing free to play games with FreeToBrowse's API. I also added functions to sort and filter the content based on user input.",
 		skills: ["HTML", "CSS", "Javascript", "API"],
 		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
@@ -21,31 +21,31 @@ const projects = [
 		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
 		repoLink: "" },
 	{
-		name: "Pet adoption website",
-		image: "icons/placeholderpic1.png",
+		name: "Something with the move cube",
+		image: "icons/",
 		description: "",
 		skills: ["HTML", "CSS", "React"],
 		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
 		repoLink: "" },
 	{
 		name: "Pet profiles",
-		image: "icons/placeholderpic1.png",
+		image: "icons/",
 		description: "A user-generated list of pet profiles saved to local storage. During the backend module of the course, I want to make an API for this to make a functioning pet-adoption website that is easy for the owner to quickly add pets.",
-		skills: ["HTML", "CSS", "React"],
+		skills: ["HTML", "CSS", "Javascript"],
 		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
 		repoLink: "" },
 	{
-		name: "Some random test project 6",
-		image: "icons/placeholderpic1.png",
-		description: "",
-		skills: ["HTML", "CSS", "React"],
+		name: "Score Counter",
+		image: "icons/",
+		description: "A project we had very early in javascript where I made a simple score tracker that keeps tabs on which team is winning. ",
+		skills: ["HTML", "CSS", "Javascript"],
 		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
 		repoLink: "" },
 	{
-		name: "Some random test project 6",
-		image: "icons/placeholderpic1.png",
-		description: "",
-		skills: ["HTML", "CSS", "React"],
+		name: "My portfolio",
+		image: "images/portfolio-header.png",
+		description: "I made my portfolio with a clean and easy to navigate layout in mind, with some nice generated gradients to match the theme. I also used javascript to add the projects, so it's easy to change them out.",
+		skills: ["HTML", "CSS", "Javascript"],
 		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
 		repoLink: "" },
 ]
@@ -116,12 +116,7 @@ function createProject()  {
 		liveLinkElement.setAttribute("href", liveLink)
 		const pointerArrow = document.createElement("img")
 		pointerArrow.classList.add("pointer-about")
-		if (isDarkMode) {
-			pointerArrow.setAttribute("src", "icons/arrow-pointer.svg");
-		}
-		else {
-			pointerArrow.setAttribute("src", "icons/arrow-light.svg");
-		}
+	    pointerArrow.setAttribute("src", "icons/arrow-pointer.svg");
 		gradientButton.append(liveLinkElement, pointerArrow)
 		projectLinks.append(gradientButton)
 

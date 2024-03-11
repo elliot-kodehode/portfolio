@@ -1,4 +1,14 @@
-make stickynav and square behind content same color,
+asap:
 
-add light mode functionality
+- add norwegian version
+- finish projects 
+- background on home
+- mobile version
+
+later:
+
+- add light mode functionality
+- better page logo
+
+
 
