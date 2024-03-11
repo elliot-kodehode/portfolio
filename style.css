@@ -165,11 +165,8 @@ body {
 /**/
 
 #home-page {
-	background-image: var(--background-image-home);
-	background-size: contain;
-	background-position: center;
+	background-image: url(images/static.png);
 }
-
 
 h1 {
 	font-size: 90px;
@@ -315,9 +312,11 @@ h2 {
 
 #selfie {
 	position: absolute;
+	filter: brightness(80%);
 	top: -70px;
 	rotate: -30deg;
 }
+
 
 
 
@@ -452,7 +451,7 @@ h2 {
 }
 
 .info-links {
-	z-index: 1;
+	/*z-index: 1;*/
 	display: flex;
 	justify-content: space-between;
 	width: 80%;
@@ -506,9 +505,10 @@ h2 {
 }
 
 .contact-background-icon{
+	pointer-events: none;
 	opacity: 20%;
 	width: 60%;
-	position: fixed;
+	position: absolute;
 	transform: skew(-6deg);
 	animation: contact-background ease-in-out 6s infinite;
 }
@@ -523,15 +523,6 @@ h2 {
 	100% {
         filter: blur(12px)
 	}
-}
-
-#home-bg-svg {
-	width: 100%;
-	opacity: 20%;
-	transform: skew(12deg) rotate(-20deg);
-	filter: blur(12px);
-	position: absolute;
-	top: 2px;
 }
 
 .line {

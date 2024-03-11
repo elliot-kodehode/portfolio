@@ -18,8 +18,6 @@ const pointerArrow = document.getElementsByClassName("pointer-about")
 const copyIcon = document.getElementById("copy-icon")
 const copyToolTip = document.getElementById("mail-contact")
 
-
-
 export function colorPicker() {
 	const gradientColours = [
 		// { start: "#c516cd", end: "#00d4ff" },

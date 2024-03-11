@@ -8,7 +8,7 @@ import { colorPicker } from "./script.js";
 const projects = [
 	{
 		name: "API-project: F2P Games",
-		image: "images/placeholderpic1.png",
+		image: "images/api-project.png",
 		description: "My project for an assignment to create a website using APIs. I decided to make a website listing free to play games with FreeToBrowse's API. I also added functions to sort and filter the content based on user input.",
 		skills: ["HTML", "CSS", "Javascript", "API"],
 		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
@@ -42,9 +42,9 @@ const projects = [
 		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
 		repoLink: "" },
 	{
-		name: "My portfolio",
-		image: "images/portfolio-header.png",
-		description: "I made my portfolio with a clean and easy to navigate layout in mind, with some nice generated gradients to match the theme. I also used javascript to add the projects, so it's easy to change them out.",
+		name: "",
+		image: "images/",
+		description: "",
 		skills: ["HTML", "CSS", "Javascript"],
 		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
 		repoLink: "" },
