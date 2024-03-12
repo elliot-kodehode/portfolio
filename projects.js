@@ -60,19 +60,19 @@ console.log(projects)
 let currentIndex = 0;
 let projectsPerPage = projects.length;
 
-const mobile = window.matchMedia("(max-width: 700px)")
+// const mobile = window.matchMedia("(max-width: 700px)")
+//
+// function responsive(mobile) {if (mobile.matches) {
+// 	projectsPerPage = projects.length
+//     }
+// 	// else projectsPerPage = 3; add later
+// }
 
-function responsive(mobile) {if (mobile.matches) {
-	projectsPerPage = projects.length
-    }
-	// else projectsPerPage = 3; add later
-}
+// responsive(mobile);
 
-responsive(mobile);
-
-mobile.addEventListener("change", function() {
-	responsive(mobile);
-  });
+// mobile.addEventListener("change", function() {
+// 	responsive(mobile);
+//   });
 
   console.log(projectsPerPage)
 

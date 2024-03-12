@@ -17,6 +17,7 @@ const pointerArrow = document.getElementsByClassName("pointer-about")
 // const iconPath = document.querySelector(".icon-path")
 const copyIcon = document.getElementById("copy-icon")
 const copyToolTip = document.getElementById("mail-contact")
+const norSwitch = document.getElementById("nor")
 
 export function colorPicker() {
 	const gradientColours = [
@@ -125,6 +126,13 @@ let contactEng = `${document.location.origin}/contact`
 let contactNor = `${document.location.origin}/no/kontakt`
 
 
-// if (currentPage === ``
+function switchLang() {
+	if (lang === "NOR") {
+		if (currentPage === indexNor) {
+			window.location = `${document.location.origin}/no`
+		}
+	}
+}
+norSwitch.addEventListener("click", switchLang)
 
 console.log(indexNor)
