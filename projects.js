@@ -22,6 +22,9 @@ const projects = [
 		skills: ["HTML", "CSS", "Javascript"],
 		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
 		repoLink: "" },
+
+
+	// add later
 	// {
 	// 	name: "Something with the move cube",
 	// 	image: "icons/",
@@ -55,13 +58,15 @@ const projects = [
 console.log(projects)
 
 let currentIndex = 0;
-let projectsPerPage = 3;
+let projectsPerPage = projects.length;
 
 const mobile = window.matchMedia("(max-width: 700px)")
 
 function responsive(mobile) {if (mobile.matches) {
 	projectsPerPage = projects.length
-}}
+    }
+	// else projectsPerPage = 3; add later
+}
 
 responsive(mobile);
 
@@ -122,12 +127,14 @@ function createProject()  {
 
 		const projectLinks = document.createElement("div")
 		projectLinks.classList.add("project-links")
+
 		const gradientButton = document.createElement("div")
 		gradientButton.classList.add("gradient-btn")
-		const liveLinkElement = document.createElement("a")
 
+		const liveLinkElement = document.createElement("a")
 		liveLinkElement.classList.add("link-text")
 		liveLinkElement.setAttribute("href", liveLink)
+
 		const pointerArrow = document.createElement("img")
 		pointerArrow.classList.add("pointer-about")
 
@@ -153,10 +160,8 @@ function createProject()  {
 		// appending things
 
 		projectImage.appendChild(projectImageGradient)
-
 		gradientButton.append(liveLinkElement, pointerArrow)
 		projectLinks.append(gradientButton)
-
 		projectInfo.append(projectName, githubRepo, projectDesc, usedSkillsContainer, projectLinks)
 		projectContainer.append(projectImage, projectInfo)
 		projectsRow.appendChild(projectContainer)
@@ -179,7 +184,9 @@ function loadNextProjects() {
 	colorPicker()
 }
 
+if (nextButton && previousButton)  {
 nextButton.addEventListener("click", loadNextProjects)
 previousButton.addEventListener("click", loadPreviousProjects)
+}
 
 createProject();

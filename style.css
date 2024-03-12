@@ -24,13 +24,14 @@
 }
 
 body {
-	width: 100vw;
-	height: 100vh;
+	background-color: var(--bg-color);
 	display: flex;
-	overflow: hidden;
 	color: var(--font-color);
     font-family: "Chakra Petch", sans-serif;
-	
+	align-content: center;
+	min-width: 100vw;
+	min-height: 100vh;
+
 }
 
 #sticky-sidenav {
@@ -49,12 +50,11 @@ body {
 .main-content {
 	display: flex;
 	flex-direction: column;
-	width: 100%;
-	height: 100%;
-	background-color: var(--bg-color);
 	align-items: center;
 	justify-content: center;
 	margin-left: 60px;
+	min-width: calc(100% - 60px);
+	min-height: 100%;
 }
 
 #social-buttons,
@@ -171,6 +171,7 @@ body {
 
 #home-page {
 	background-image: url(images/static.png);
+	background-size: cover;
 }
 
 h1 {
@@ -226,7 +227,8 @@ h2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	max-width: 1920px;
+	min-width: 100%;
 	height: 100%;
 	padding: 5% 8%;
 }
@@ -235,7 +237,7 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	height: 90%;
-	width: 40%;
+	width: 60%;
 	gap: 22px;
 }
 
@@ -243,7 +245,7 @@ h2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 50%;
+	width: 40%;
 	height: 100%;
 }
 
@@ -319,6 +321,7 @@ h2 {
 }
 
 #selfie, #selfie-mobile {
+	max-width: 500px;
 	position: absolute;
 	filter: brightness(80%);
 	top: -70px;
@@ -335,22 +338,23 @@ h2 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
-	height: 100%;
-	padding: 0 32px;
+	/*min-width: 100%;*/
+	min-height: fit-content;
+	/*padding: 0 32px;*/
 
 }
 
 #projects-row {
 	padding: 0 12px;
 	display: flex;
+	/*flex-wrap: wrap;*/
 	justify-content: center;
 	gap: 52px;
-	width: 90%;
+	width: 100%;
 }
 
 #project-title {
-	padding-top: 32px;
+	padding-bottom: 22px;
 }
 .project-container {
 	display: flex;
@@ -358,7 +362,7 @@ h2 {
 	justify-content: center;
 	align-items: center;
 	height: max-content;
-	width: 350px;
+	width: 400px;
 	max-width: 400px;
 	background-color: var(--container-background);
 	padding: 0 12px 12px 12px;
@@ -366,13 +370,14 @@ h2 {
 	border-radius: 8px;
 	gap: 12px;
 	overflow: hidden;
-	margin-top: -32px;
 }
 
 #project-nav-btn-left, #project-nav-btn-right {
 	margin: 32px;
 	position: relative;
 	cursor: pointer;
+	display: none;
+	/*// hidden until ive added more projects*/
 }
 
 #project-nav-btn-left {
@@ -459,8 +464,9 @@ h2 {
 }
 
 .info-links {
-	/*z-index: 1;*/
 	display: flex;
+	flex-wrap: wrap;
+	gap: 22px;
 	justify-content: space-between;
 	width: 80%;
 	border-top: var(--font-color) solid 6px;
@@ -491,7 +497,8 @@ h2 {
 }
 
 #copy-icon {
-	margin-left: 11px;
+	overflow: visible;
+	margin-left: 8px;
 	/*width: 3%;*/
 	height: 100%;
 }
@@ -509,7 +516,8 @@ h2 {
 
 #mail-contact {
 	font-size: 16px;
-	margin-top: -8px;
+	margin-top: -14px;
+	margin-left: -17px;
 }
 
 .contact-background-icon{
@@ -553,14 +561,14 @@ h2 {
 	h1 {
 	    font-size: 50px;
 	    font-weight: 700;
-	    text-align: stretch;
+	    text-align: center;
     } 
 	h2 {font-size: 20px;
 		
 	}
 
 	body {
-		overflow: scroll;
+		/*overflow: scroll;*/
 	}
 
 	.tooltip-text {
@@ -568,7 +576,7 @@ h2 {
     }
 
 	#sticky-sidenav {
-		padding: 40px 0; 
+		/*padding: 40px 0; */
 	}
 	
 	#projects-page, #about-page {
@@ -584,7 +592,6 @@ h2 {
 	.content-wrapper {
 		margin-top: 22px;
 		flex-direction: column;
-		width: 100%;
 	}
 
 	#about-h1 {
@@ -601,7 +608,7 @@ h2 {
 	}
 
 	.info-container, .picture-container, #about-info {
-		width: 100%;
+		/*width: 100%;*/
 	}
 
 	.picture-container {
@@ -664,6 +671,8 @@ h2 {
 		font-size: 28px;
 	}
 	#contact-wrapper {
+		width: 100%;
+		overflow: hidden;
 		align-items: start;
 	}
     .info-links {
@@ -682,9 +691,9 @@ h2 {
 
 	.contact-background-icon {
 		height: 300px;
-		width: 400px;
+		width: 70%;
 		margin-left: 16px;
-		opacity: 60%;
+		opacity: 20%;
 	}
 
     .skills-container {

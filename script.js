@@ -89,18 +89,22 @@ colorPicker()
 // copying email 
 
 let emailCopy = "elliotalexander98@gmail.com"
-function TextCopy() {
+
+let lang = document.documentElement.lang
+function textCopy() {
 	navigator.clipboard.writeText(emailCopy);
 
-	document.documentElement.lang = "NOR" ? copyToolTip.textContent = "Email kopiert!" : copyToolTip.textContent = "Email copied!";
+	lang === "NOR" ? copyToolTip.textContent = "Email kopiert!" : copyToolTip.textContent = "Email copied!";
 
 }
 
-const resetCopy = () => document.documentElement.lang = "NOR" ? copyToolTip.textContent = "Kopier email" : copyToolTip.textContent = "Copy email";
+
+
+const resetCopy = () => lang === "NOR" ? copyToolTip.textContent = "Kopier email" : copyToolTip.textContent = "Copy email";
 
 
 if (copyIcon) {
-	copyIcon.addEventListener("click", TextCopy)
+	copyIcon.addEventListener("click", textCopy)
 	copyIcon.addEventListener("mouseleave", resetCopy)
 }
 
