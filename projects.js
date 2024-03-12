@@ -13,15 +13,15 @@ const projects = [
 		description: "My project for an assignment to create a website using APIs. I decided to make a website listing free to play games with FreeToGame's API. I also added functions to sort the content based on user input.",
 		descNor: "Mitt prosjekt",
 		skills: ["HTML", "CSS", "Javascript", "API"],
-		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
-		repoLink: "" },
+		liveLink: "https://elliot-kodehode.github.io/f2p-games/",
+		repoLink: "https://github.com/elliot-kodehode/f2p-games" },
 	{
 		name: "Interactive JS Drumkit",
 		image: "images/jsdrumkit.png",
 		description: "A small assignment where I had to use audio files, data keys and event listeners to make an interactive drumkit that plays sound on both keypress and button clicks.",
 		skills: ["HTML", "CSS", "Javascript"],
-		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
-		repoLink: "" },
+		liveLink: "https://elliot-kodehode.github.io/js-drumkit/",
+		repoLink: "https://github.com/elliot-kodehode/js-drumkit" },
 
 
 	// add later
@@ -60,6 +60,7 @@ console.log(projects)
 let currentIndex = 0;
 let projectsPerPage = projects.length;
 
+// not in use before i have 3+ projects listed
 // const mobile = window.matchMedia("(max-width: 700px)")
 //
 // function responsive(mobile) {if (mobile.matches) {
@@ -74,7 +75,7 @@ let projectsPerPage = projects.length;
 // 	responsive(mobile);
 //   });
 
-  console.log(projectsPerPage)
+console.log(projectsPerPage)
 
 function createProject()  {
 

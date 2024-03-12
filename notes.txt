@@ -1,10 +1,6 @@
 asap:
 
-- add norwegian version
 - finish projects 
-- background on home
-- mobile version
-https://www.cssscript.com/starry-sky-background-effect/
 
 
 

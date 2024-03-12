@@ -111,21 +111,13 @@ body {
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	text-decoration: none;
+    color: grey;
 }
 
 .lang-icon:has(+ .lang-container:hover){
 	transform: scale(1.1);
 	animation: ease;
-}
-
-
-.toggle-circle:checked + .toggler {
-	color: var(--font-color);
-}
-
-.toggle-circle {
-	display: none;
-
 }
 
 .options {
@@ -156,6 +148,7 @@ body {
 	user-select: none;
 }
 
+
 #mode-icon path {
 	width: 25px !important;
 	height: 25px !important;
@@ -175,6 +168,15 @@ body {
 	padding: 5% 8%;
 }
 
+
+.active-lang {
+	color: var(--font-color);
+	font-weight: 500;
+}
+
+.link {
+	text-decoration: none;
+}
 /*home page*/
 /**/
 
@@ -456,7 +458,6 @@ h2 {
 	font-weight: bold;
 	font-size: 18px;
 }
-.link {	text-decoration: none;}
 
 /*contact*/
 /**/

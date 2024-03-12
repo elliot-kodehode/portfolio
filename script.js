@@ -8,24 +8,21 @@ const mainContent = document.getElementById("main-content")
 const gradientText = document.getElementsByClassName('gradient-text')
 const gradientIcon = document.getElementsByClassName('gradient-icon')
 const linkedIn = document.getElementById('linked-in')
-const languageSwitch = document.querySelector(".toggle-mode")
-const modeIcon = document.getElementById("mode-icon")
+// const languageSwitch = document.querySelector(".toggle-mode")
+// const modeIcon = document.getElementById("mode-icon")
 const gradientBtn = document.getElementsByClassName("gradient-btn")
-const textContent = document.getElementsByClassName(".text")
-const textLinks = document.getElementsByClassName("link-text")
-const pointerArrow = document.getElementsByClassName("pointer-about")
+// const textContent = document.getElementsByClassName(".text")
+// const textLinks = document.getElementsByClassName("link-text")
+// const pointerArrow = document.getElementsByClassName("pointer-about")
 // const iconPath = document.querySelector(".icon-path")
 const copyIcon = document.getElementById("copy-icon")
 const copyToolTip = document.getElementById("mail-contact")
-const norSwitch = document.getElementById("nor")
 
 export function colorPicker() {
 	const gradientColours = [
-		// { start: "#c516cd", end: "#00d4ff" },
-		// { start: "#731ee9", end: "#24e324" },
-		// { start: "#9d2aff", end: "#ff361c" },
-		// { start: "#255ddb", end: "#06ff65" },
-
+		{ start: "#c516cd", end: "#00d4ff" },
+		{ start: "#9d2aff", end: "#ff361c" },
+		{ start: "#255ddb", end: "#06ff65" },
 		{ start: '#8e5af4', end: '#4bffe4' },
 		{ start: '#ff9447', end: '#ff605a' }
 	]
@@ -108,31 +105,3 @@ if (copyIcon) {
 	copyIcon.addEventListener("click", textCopy)
 	copyIcon.addEventListener("mouseleave", resetCopy)
 }
-
-// switching between languages
-
-let currentPage = document.location
-
-let indexEng = document.location.origin
-let indexNor = `${document.location.origin}/no`
-
-let aboutEng = `${document.location.origin}/about`
-let aboutNo = `${document.location.origin}/no/om-meg`
-
-let projectsEng = `${document.location.origin}/projects`
-let projectsNor = `${document.location.origin}/no/prosjekter`
-
-let contactEng = `${document.location.origin}/contact`
-let contactNor = `${document.location.origin}/no/kontakt`
-
-
-function switchLang() {
-	if (lang === "NOR") {
-		if (currentPage === indexNor) {
-			window.location = `${document.location.origin}/no`
-		}
-	}
-}
-norSwitch.addEventListener("click", switchLang)
-
-console.log(indexNor)
