@@ -8,8 +8,10 @@ import { colorPicker } from "./script.js";
 const projects = [
 	{
 		name: "API-project: F2P Games",
+		nameNor: "API-prosjekt: F2P Games",
 		image: "images/api-project.png",
 		description: "My project for an assignment to create a website using APIs. I decided to make a website listing free to play games with FreeToGame's API. I also added functions to sort the content based on user input.",
+		descNor: "Mitt prosjekt",
 		skills: ["HTML", "CSS", "Javascript", "API"],
 		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
 		repoLink: "" },
@@ -20,34 +22,34 @@ const projects = [
 		skills: ["HTML", "CSS", "Javascript"],
 		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
 		repoLink: "" },
-	{
-		name: "Something with the move cube",
-		image: "icons/",
-		description: "",
-		skills: ["HTML", "CSS", "React"],
-		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
-		repoLink: "" },
-	{
-		name: "Pet profiles",
-		image: "icons/",
-		description: "A user-generated list of pet profiles saved to local storage. During the backend module of the course, I want to make an API for this to make a functioning pet-adoption website that is easy for the owner to quickly add pets.",
-		skills: ["HTML", "CSS", "Javascript"],
-		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
-		repoLink: "" },
-	{
-		name: "Score Counter",
-		image: "icons/",
-		description: "A project we had very early in javascript where I made a simple score tracker that keeps tabs on which team is winning. ",
-		skills: ["HTML", "CSS", "Javascript"],
-		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
-		repoLink: "" },
-	{
-		name: "",
-		image: "images/",
-		description: "",
-		skills: ["HTML", "CSS", "Javascript"],
-		liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
-		repoLink: "" },
+	// {
+	// 	name: "Something with the move cube",
+	// 	image: "icons/",
+	// 	description: "",
+	// 	skills: ["HTML", "CSS", "React"],
+	// 	liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
+	// 	repoLink: "" },
+	// {
+	// 	name: "Pet profiles",
+	// 	image: "icons/",
+	// 	description: "A user-generated list of pet profiles saved to local storage. During the backend module of the course, I want to make an API for this to make a functioning pet-adoption website that is easy for the owner to quickly add pets.",
+	// 	skills: ["HTML", "CSS", "Javascript"],
+	// 	liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
+	// 	repoLink: "" },
+	// {
+	// 	name: "Score Counter",
+	// 	image: "icons/",
+	// 	description: "A project we had very early in javascript where I made a simple score tracker that keeps tabs on which team is winning. ",
+	// 	skills: ["HTML", "CSS", "Javascript"],
+	// 	liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
+	// 	repoLink: "" },
+	// {
+	// 	name: "",
+	// 	image: "images/",
+	// 	description: "",
+	// 	skills: ["HTML", "CSS", "Javascript"],
+	// 	liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
+	// 	repoLink: "" },
 ]
 
 console.log(projects)
@@ -81,7 +83,7 @@ function createProject()  {
 		const adjustedIndex = (currentIndex + i) % projects.length;
 
 		// deconstructing the objects that are shown
-		const { name, image, description, skills, liveLink, repoLink } = projects[adjustedIndex];
+		const { name, nameNor, image, description, descNor, skills, liveLink, repoLink } = projects[adjustedIndex];
 
 		// making elements
 		const projectContainer = document.createElement("div");
@@ -91,15 +93,12 @@ function createProject()  {
 		projectImageGradient.classList.add("project-image-gradient");
 		const projectImage = document.createElement("div");
 		projectImage.classList.add("project-image");
-		projectImage.style.backgroundImage = `url(${image})`;
-		projectImage.appendChild(projectImageGradient)
 
 		const projectInfo = document.createElement("div")
 		projectInfo.classList.add("project-info")
 
 		const projectName = document.createElement("h3")
-		projectName.textContent = name;
-
+		
 		const githubRepo = document.createElement("a")
 		const githubRepoText = document.createElement("span")
 		githubRepoText.classList.add("gradient-text", "project-repo")
@@ -109,8 +108,7 @@ function createProject()  {
 		githubRepo.appendChild(githubRepoText)
 
 		const projectDesc = document.createElement("p")
-		projectDesc.style.height = "130px"
-		projectDesc.textContent = description
+		projectDesc.style.height = "130px";	
 
 		const usedSkillsContainer = document.createElement("div")
 		usedSkillsContainer.classList.add("skills-container")
@@ -127,12 +125,35 @@ function createProject()  {
 		const gradientButton = document.createElement("div")
 		gradientButton.classList.add("gradient-btn")
 		const liveLinkElement = document.createElement("a")
-		liveLinkElement.textContent = "See Live"
+
 		liveLinkElement.classList.add("link-text")
 		liveLinkElement.setAttribute("href", liveLink)
 		const pointerArrow = document.createElement("img")
 		pointerArrow.classList.add("pointer-about")
-	    pointerArrow.setAttribute("src", "icons/arrow-pointer.svg");
+
+
+		// language-specific elements
+
+		if (document.documentElement.lang === "NOR") {
+			projectDesc.textContent = descNor;
+			projectName.textContent = nameNor;
+			liveLinkElement.textContent = "Se live";
+			pointerArrow.setAttribute("src", "../icons/arrow-pointer.svg");
+			projectImage.style.backgroundImage = `url(../${image})`;
+		}	
+		else {
+			projectDesc.textContent = description;
+			projectName.textContent = name;
+			liveLinkElement.textContent = "See live";
+			pointerArrow.setAttribute("src", "icons/arrow-pointer.svg");
+			projectImage.style.backgroundImage = `url(${image})`;
+		};
+
+
+		// appending things
+
+		projectImage.appendChild(projectImageGradient)
+
 		gradientButton.append(liveLinkElement, pointerArrow)
 		projectLinks.append(gradientButton)
 

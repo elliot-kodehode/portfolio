@@ -219,6 +219,9 @@ h2 {
 /*about page*/
 /**/
 
+.picture-container-mobile {
+	display: none;
+}
 .content-wrapper {
 	display: flex;
 	justify-content: center;
@@ -289,7 +292,7 @@ h2 {
 	margin: 2px;}
 
 
-#pic-bg {
+#pic-bg, #pic-bg-mobile {
 	position: relative;
 	width: 550px;
 	height: 500px;
@@ -315,7 +318,7 @@ h2 {
 	flex-direction: column;
 }
 
-#selfie {
+#selfie, #selfie-mobile {
 	position: absolute;
 	filter: brightness(80%);
 	top: -70px;
@@ -544,19 +547,92 @@ h2 {
 /* media queries */
 
 @media only screen and (max-width: 700px) {
+
+	/* global  */
+
 	h1 {
-	font-size: 50px;
-	font-weight: 700;
-	text-align: stretch;
+	    font-size: 50px;
+	    font-weight: 700;
+	    text-align: stretch;
     } 
 	h2 {font-size: 20px;
 		
 	}
 
 	body {
-		/* height: fit-content; */
 		overflow: scroll;
 	}
+
+	.tooltip-text {
+	    display: none;
+    }
+
+	#sticky-sidenav {
+		padding: 40px 0; 
+	}
+	
+	#projects-page, #about-page {
+		height: max-content;
+		overflow: scroll;
+		gap: 52px;
+		padding-top: 32px;
+		padding-bottom: 22px;
+	}
+	
+	/* about */
+
+	.content-wrapper {
+		margin-top: 22px;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	#about-h1 {
+		font-size: 42px;
+	}
+
+	#about-h3 {
+		font-size: 18px;
+		padding: 0;
+		margin: 10px;
+	}
+	#about-headers {
+		margin: 0;
+	}
+
+	.info-container, .picture-container, #about-info {
+		width: 100%;
+	}
+
+	.picture-container {
+		display: none;
+	}
+
+	.picture-container-mobile {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: fit-content;
+		margin-bottom: 32px;
+	}
+
+	.picture-container-mobile * {
+		max-width: 200px;
+	}
+
+	#pic-bg-mobile {
+		width: 200px;
+		height: 180px;
+		transform: rotate(40deg);
+	}
+
+	#selfie-mobile {
+		left: 8px;
+		top: -36px;
+		transform: rotate(-50deg);
+	}
+
+	/* projects */
 
 	#projects-row {
 		margin: 0;
@@ -566,13 +642,11 @@ h2 {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		/* gap: 10%; */
 	}
 
 	.project-container {
 		width: 280px;
 		height: fit-content;
-		/* gap: 12px; */
 	}
 
 	.project-image {
@@ -583,13 +657,6 @@ h2 {
 		display: none;
 	}
 	
-	#projects-page {
-		height: max-content;
-		overflow: scroll;
-		/* gap: 52px; */
-	}
-
-
 
  /* contact */
 
@@ -600,17 +667,17 @@ h2 {
 		align-items: start;
 	}
     .info-links {
-	width: 100%;
-	flex-direction: column;
-	gap: 12px;
+	    width: 100%;
+	    flex-direction: column;
+	    gap: 12px;
     }
     #mail-wrapper, .so-me-contact{
-	flex-direction: column;
-	align-items: start;
-	gap: 4px;
+	    flex-direction: column;
+	    align-items: start;
+	    gap: 4px;
     }
     #mail-info {
-	display: none;
+	    display: none;
     }
 
 	.contact-background-icon {
@@ -621,6 +688,6 @@ h2 {
 	}
 
     .skills-container {
-	padding-top: 10px;
+	    padding-top: 10px;
     }
 }
