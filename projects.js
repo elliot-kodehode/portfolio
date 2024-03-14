@@ -11,7 +11,7 @@ const projects = [
 		nameNor: "API-prosjekt: F2P Games",
 		image: "images/api-project.png",
 		description: "My project for an assignment to create a website using APIs. I decided to make a website listing free to play games with FreeToGame's API. I also added functions to sort the content based on user input.",
-		descNor: "Mitt prosjekt",
+		descNor: "Mitt prosjekt for en oppgave om å bruke API'er for å lage en valgfri nettside med innholdet en henter. Jeg brukte FreeToGame sin API med gratis spill. Listen kan også sorteres etter hva bruker ønsker.",
 		skills: ["HTML", "CSS", "Javascript", "API"],
 		liveLink: "https://elliot-kodehode.github.io/f2p-games/",
 		repoLink: "https://github.com/elliot-kodehode/f2p-games" },
@@ -19,6 +19,7 @@ const projects = [
 		name: "Interactive JS Drumkit",
 		image: "images/jsdrumkit.png",
 		description: "A small assignment where I had to use audio files, data keys and event listeners to make an interactive drumkit that plays sound on both keypress and button clicks.",
+		descNor: "Ett lite prosjekt der jeg brukte lydfiler, event listeners og data keys for å lage ett trommesett som spiller lyd både med museklikk og tastatur-knapper."
 		skills: ["HTML", "CSS", "Javascript"],
 		liveLink: "https://elliot-kodehode.github.io/js-drumkit/",
 		repoLink: "https://github.com/elliot-kodehode/js-drumkit" },
