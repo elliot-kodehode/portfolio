@@ -8,15 +8,10 @@ const mainContent = document.getElementById("main-content")
 const gradientText = document.getElementsByClassName('gradient-text')
 const gradientIcon = document.getElementsByClassName('gradient-icon')
 const linkedIn = document.getElementById('linked-in')
-// const languageSwitch = document.querySelector(".toggle-mode")
-// const modeIcon = document.getElementById("mode-icon")
 const gradientBtn = document.getElementsByClassName("gradient-btn")
-// const textContent = document.getElementsByClassName(".text")
-// const textLinks = document.getElementsByClassName("link-text")
-// const pointerArrow = document.getElementsByClassName("pointer-about")
-// const iconPath = document.querySelector(".icon-path")
 const copyIcon = document.getElementById("copy-icon")
 const copyToolTip = document.getElementById("mail-contact")
+
 
 export function colorPicker() {
 	const gradientColours = [
@@ -33,6 +28,7 @@ export function colorPicker() {
 
 	// setting text-color gradient
 	for (let i = 0; i < gradientText.length; i++) {
+
 		// setting text-color gradient for each element
 		gradientText[i].style.backgroundImage = `linear-gradient(60deg, ${chosenColors.start}, ${chosenColors.end})`;
 		gradientText[i].style.WebkitBackgroundClip = 'text';
