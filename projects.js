@@ -17,10 +17,10 @@ const projects = [
 		repoLink: "https://github.com/elliot-kodehode/f2p-games" },
 	{
 		name: "Interactive JS Drumkit",
-		nameNor: "Interaktivt JS Trommesett"
+		nameNor: "Interaktivt JS Trommesett",
 		image: "images/jsdrumkit.png",
 		description: "A small assignment where I had to use audio files, data keys and event listeners to make an interactive drumkit that plays sound on both keypress and button clicks.",
-		descNor: "Ett lite prosjekt der jeg brukte lydfiler, event listeners og data keys for å lage ett trommesett som spiller lyd både med museklikk og tastatur-knapper."
+		descNor: "Ett lite prosjekt der jeg brukte lydfiler, event listeners og data keys for å lage ett trommesett som spiller lyd både med museklikk og tastatur-knapper.",
 		skills: ["HTML", "CSS", "Javascript"],
 		liveLink: "https://elliot-kodehode.github.io/js-drumkit/",
 		repoLink: "https://github.com/elliot-kodehode/js-drumkit" },
