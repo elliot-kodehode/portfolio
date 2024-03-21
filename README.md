@@ -15,5 +15,6 @@ It's a showcase of my projects, skills, and experiences in the field of developm
 <strong>About me:</strong><br> Visitors can learn about me, my skills in various programming languages, tools, and technologies. (And my dog! 🐶)
 
 <strong>Contact Information:</strong><br> Easy to find and use links to social media and contact information.
+<br><br>
 
 Feel free to explore my portfolio website to learn more about my background, skills, and the projects I've worked on. 🦕
