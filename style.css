@@ -311,6 +311,10 @@ h2 {
 	rotate: 40deg;
 	/*padding: 0 15px 15px 15px;*/
 }
+
+#pic-bg:hover, #pic-bg-mobile:hover {
+	transform: scale(unset);
+}
 #pointer-projects {
 	width: 46%;
 	right: -10px;
@@ -594,9 +598,9 @@ h2 {
 	/* about */
 
 	#about-page {
-		min-height: 100%;
+		/* min-height: 100%; */
 		/*padding-top: 22px;*/
-		/*padding-bottom: 22px;*/
+		padding: 0 0 102px 0;
 	}
 
 	.content-wrapper {
@@ -615,6 +619,12 @@ h2 {
 	}
 	#about-headers {
 		margin: 0;
+	}
+
+	#pointer-projects {
+		transform: unset;
+		top: 20px;
+		right: -26px;
 	}
 
 	/* projects */
