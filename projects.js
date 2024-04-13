@@ -24,37 +24,16 @@ const projects = [
 		skills: ["HTML", "CSS", "Javascript"],
 		liveLink: "https://elliot-kodehode.github.io/js-drumkit/",
 		repoLink: "https://github.com/elliot-kodehode/js-drumkit" },
+	{
+		name: "React Social Media Feed",
+		nameNor: "Sosial media feed i React",
+		image: "images/media-feed.png",
+		description: "My first react project I made to get familiar with the basic setup of React. It uses React hooks such as useEffect and useState, with functionality for new posts to be saved locally.",
+		descNor: "Mitt første React-prosjekt laget for å bli kjent med det grunnleggende oppsettet. Jeg brukte React-hooks som useEffect og useState, med funksjonalitet for å lagre nye poster lokalt.",
+		skills: ["React"],
+		liveLink: "https://elliot-kodehode-socialmedia.netlify.app/",
+		repoLink: "https://github.com/elliot-kodehode/social-media" },
 
-
-	// add later
-	// {
-	// 	name: "Something with the move cube",
-	// 	image: "icons/",
-	// 	description: "",
-	// 	skills: ["HTML", "CSS", "React"],
-	// 	liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
-	// 	repoLink: "" },
-	// {
-	// 	name: "Pet profiles",
-	// 	image: "icons/",
-	// 	description: "A user-generated list of pet profiles saved to local storage. During the backend module of the course, I want to make an API for this to make a functioning pet-adoption website that is easy for the owner to quickly add pets.",
-	// 	skills: ["HTML", "CSS", "Javascript"],
-	// 	liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
-	// 	repoLink: "" },
-	// {
-	// 	name: "Score Counter",
-	// 	image: "icons/",
-	// 	description: "A project we had very early in javascript where I made a simple score tracker that keeps tabs on which team is winning. ",
-	// 	skills: ["HTML", "CSS", "Javascript"],
-	// 	liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
-	// 	repoLink: "" },
-	// {
-	// 	name: "",
-	// 	image: "images/",
-	// 	description: "",
-	// 	skills: ["HTML", "CSS", "Javascript"],
-	// 	liveLink: "https://github.com/Kodehode-Stavanger/javascript-advanced-project-api-elliot-kodehode/deployments/github-pages",
-	// 	repoLink: "" },
 ]
 
 console.log(projects)
@@ -63,6 +42,7 @@ let currentIndex = 0;
 let projectsPerPage = projects.length;
 
 // not in use before i have 3+ projects listed
+
 // const mobile = window.matchMedia("(max-width: 700px)")
 //
 // function responsive(mobile) {if (mobile.matches) {
