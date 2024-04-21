@@ -7,6 +7,15 @@ import { colorPicker } from "./script.js";
 
 const projects = [
 	{
+		name: "React Calculator",
+		nameNor: "React Kalkulator",
+		image: "images/react-calc.png",
+		description: "A basic calculator made in React that. It has working functionality and logic, as well as a theme switcher with a choice of 3 different themes.  ",
+		descNor: "En enkel kalkulator laget i React. Den har standard funksjonalitet og logikk, og en knapp hvor man kan velge 3 forskjellige temaer.",
+		skills: ["React"],
+		liveLink: "https://elliot-react-calculator.netlify.app/",
+		repoLink: "https://github.com/elliot-kodehode/React-Calculator" },
+	{
 		name: "API-project: F2P Games",
 		nameNor: "API-prosjekt: F2P Games",
 		image: "images/api-project.png",
@@ -27,7 +36,7 @@ const projects = [
 	{
 		name: "React Social Media Feed",
 		nameNor: "Sosial media feed i React",
-		image: "images/media-feed.png",
+		image: "images/some-pic.png",
 		description: "My first react project I made to get familiar with the basic setup of React. It uses React hooks such as useEffect and useState, with functionality for new posts to be saved locally.",
 		descNor: "Mitt første React-prosjekt laget for å bli kjent med det grunnleggende oppsettet. Jeg brukte React-hooks som useEffect og useState, med funksjonalitet for å lagre nye poster lokalt.",
 		skills: ["React"],
@@ -39,9 +48,9 @@ const projects = [
 console.log(projects)
 
 let currentIndex = 0;
-let projectsPerPage = projects.length;
+let projectsPerPage = 4;
 
-// not in use before i have 3+ projects listed
+// not in use before i have 4+ projects listed
 
 // const mobile = window.matchMedia("(max-width: 700px)")
 //
